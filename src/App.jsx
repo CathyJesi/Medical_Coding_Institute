@@ -232,11 +232,11 @@ function App() {
             <div className="center-heading"><span className="section-kicker">HOW YOU LEARN</span><h2>More than <span>just lectures.</span></h2><p>The proposed learning experience keeps students practicing, testing and improving.</p></div>
             <div className="method-grid">
               {[
-                ['01','Live Classes','Interactive instructor-led online sessions.','Video'],
-                ['02','Recorded Learning','Revision support when you need it.','Play'],
-                ['03','Coding Practice','Clinical scenarios and case-based exercises.','Practice'],
-                ['04','Assessments','Quizzes, assignments and mock examinations.','Assess'],
-              ].map(([n,t,d]) => <div className="method-card" key={n}><span>{n}</span><div className="method-line" /><h3>{t}</h3><p>{d}</p><small>{n === '01' ? 'LEARN' : n === '02' ? 'REVISE' : n === '03' ? 'PRACTICE' : 'MASTER'}</small></div>)}
+                ['01', 'Live Classes', 'Interactive instructor-led online sessions.', 'Video'],
+                ['02', 'Recorded Learning', 'Revision support when you need it.', 'Play'],
+                ['03', 'Coding Practice', 'Clinical scenarios and case-based exercises.', 'Practice'],
+                ['04', 'Assessments', 'Quizzes, assignments and mock examinations.', 'Assess'],
+              ].map(([n, t, d]) => <div className="method-card" key={n}><span>{n}</span><div className="method-line" /><h3>{t}</h3><p>{d}</p><small>{n === '01' ? 'LEARN' : n === '02' ? 'REVISE' : n === '03' ? 'PRACTICE' : 'MASTER'}</small></div>)}
             </div>
           </div>
         </section>
@@ -245,7 +245,7 @@ function App() {
           <div className="container trainer-card">
             <div className="trainer-visual">
               <div className="trainer-photo-wrap">
-                <img src="/trainer-profile.png" alt="Godson Y, CPC — Trainer at Zion Medical Coding Academy" className="trainer-photo" />
+                <img src={`${import.meta.env.BASE_URL}trainer-profile.png`} alt="Godson Y, CPC — Trainer at Zion Medical Coding Academy" className="trainer-photo" />
                 <div className="trainer-photo-badge"><Award size={16} /><span>GODSON Y, CPC</span></div>
               </div>
             </div>
@@ -268,13 +268,13 @@ function App() {
             <div className="center-heading"><span className="section-kicker">WHY ZION</span><h2>Built around <span>your progress.</span></h2></div>
             <div className="why-grid">
               {[
-                ['01','Updated Curriculum','Designed around annual coding changes and current learning needs.'],
-                ['02','Practical Exercises','Move beyond theory with scenarios, records and coding practice.'],
-                ['03','Live Doubt Clearing','Get help understanding difficult concepts and coding decisions.'],
-                ['04','Mock Examinations','Practice under exam-style conditions and learn from mistakes.'],
-                ['05','Small-Batch Focus','A learning model designed to encourage interaction and feedback.'],
-                ['06','Student Support','Revision, assessment feedback and guidance throughout the program.'],
-              ].map(([n,t,d]) => <div className="why-card" key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></div>)}
+                ['01', 'Updated Curriculum', 'Designed around annual coding changes and current learning needs.'],
+                ['02', 'Practical Exercises', 'Move beyond theory with scenarios, records and coding practice.'],
+                ['03', 'Live Doubt Clearing', 'Get help understanding difficult concepts and coding decisions.'],
+                ['04', 'Mock Examinations', 'Practice under exam-style conditions and learn from mistakes.'],
+                ['05', 'Small-Batch Focus', 'A learning model designed to encourage interaction and feedback.'],
+                ['06', 'Student Support', 'Revision, assessment feedback and guidance throughout the program.'],
+              ].map(([n, t, d]) => <div className="why-card" key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></div>)}
             </div>
           </div>
         </section>
@@ -297,7 +297,7 @@ function App() {
           <div className="container faq-inner">
             <div className="faq-intro"><span className="section-kicker">FAQ</span><h2>Questions?<br /><span>We have answers.</span></h2><p>More details about the program can be added here as the institute finalizes its policies.</p></div>
             <div className="faq-list">
-              {faqs.map(([q,a], i) => <div className={openFaq === i ? 'faq open' : 'faq'} key={q}>
+              {faqs.map(([q, a], i) => <div className={openFaq === i ? 'faq open' : 'faq'} key={q}>
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)}><span>{q}</span><ChevronDown className={openFaq === i ? 'rotate' : ''} /></button>
                 {openFaq === i && <p>{a}</p>}
               </div>)}
