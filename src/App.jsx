@@ -67,12 +67,12 @@ const tutors = [
   },
   {
     name: 'Srividhya K',
-    credential: 'CPC-A',
+    credential: 'CPC',
     experience: '3+ years',
   },
   {
     name: 'Maria Agnes J',
-    credential: 'CPC-A',
+    credential: 'CPC',
     experience: '3+ years',
   },
   {
