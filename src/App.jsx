@@ -63,33 +63,27 @@ const tutors = [
   {
     name: 'Gnanaoli S',
     credential: 'CCS',
-    experience: '3.5 years',
-    image: 'gnanaoli.png'
+    experience: '3+ years',
   },
   {
     name: 'Srividhya K',
     credential: 'CPC-A',
-    experience: '3.8 years',
-    image: 'srividhya.png'
+    experience: '3+ years',
   },
   {
     name: 'Maria Agnes J',
     credential: 'CPC-A',
-    experience: '3.8 years',
-    image: 'maria-agnes.png'
+    experience: '3+ years',
   },
   {
     name: 'Dhivya T',
     credential: 'CCS',
-    experience: '3.9 years',
-    specialization: '1.4 years HCC • 2.5 years ED Specialty',
-    image: 'dhivya.png'
+    experience: '3+ years',
   },
   {
     name: 'Thanveer Ahmed B',
     credential: 'CCS',
-    experience: '3.5 years',
-    image: 'thanveer.png'
+    experience: '3+ years',
   }
 ]
 
@@ -671,11 +665,10 @@ function App() {
 
               <p className="trainer-intro">
                 Professional instruction focused on building a strong understanding
-                of U.S. medical coding and practical code selection.
+                of U.S. and UAE medical coding and practical code selection.
               </p>
 
               <div className="credentials">
-
                 <div>
                   <Award />
                   <span>
@@ -683,7 +676,6 @@ function App() {
                     <small>Professional credential</small>
                   </span>
                 </div>
-
                 <div>
                   <Stethoscope />
                   <span>
@@ -691,7 +683,6 @@ function App() {
                     <small>Core area of instruction</small>
                   </span>
                 </div>
-
                 <div>
                   <BookOpen />
                   <span>
@@ -699,7 +690,13 @@ function App() {
                     <small>Case-based approach</small>
                   </span>
                 </div>
-
+                <div>
+                  <Stethoscope />
+                  <span>
+                    <strong>UAE Coding</strong>
+                    <small>Current UAE medical Coding experience</small>
+                  </span>
+                </div>
               </div>
 
               <p className="note">
