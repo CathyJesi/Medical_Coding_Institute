@@ -59,6 +59,40 @@ const faqs = [
   ['Are practical coding exercises included?', 'Yes. Case-based exercises, coding assignments, module assessments, mock tests and practical scenarios are central to the proposed methodology.'],
 ]
 
+const tutors = [
+  {
+    name: 'Gnanaoli S',
+    credential: 'CCS',
+    experience: '3.5 years',
+    image: 'gnanaoli.png'
+  },
+  {
+    name: 'Srividhya K',
+    credential: 'CPC-A',
+    experience: '3.8 years',
+    image: 'srividhya.png'
+  },
+  {
+    name: 'Maria Agnes J',
+    credential: 'CPC-A',
+    experience: '3.8 years',
+    image: 'maria-agnes.png'
+  },
+  {
+    name: 'Dhivya T',
+    credential: 'CCS',
+    experience: '3.9 years',
+    specialization: '1.4 years HCC • 2.5 years ED Specialty',
+    image: 'dhivya.png'
+  },
+  {
+    name: 'Thanveer Ahmed B',
+    credential: 'CCS',
+    experience: '3.5 years',
+    image: 'thanveer.png'
+  }
+]
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openModule, setOpenModule] = useState(2)
@@ -185,7 +219,8 @@ function App() {
               ['about', 'About'],
               ['courses', 'Courses'],
               ['curriculum', 'Curriculum'],
-              ['trainer', 'Trainer'],
+              ['trainer', 'Founder'],
+              ['tutors', 'Tutors'],
               ['faq', 'FAQ']
             ].map(([id, label]) => (
               <button key={id} onClick={() => go(id)}>
@@ -603,7 +638,7 @@ function App() {
           </div>
         </section>
 
-        {/* TRAINER */}
+        {/* FOUNDER & LEAD TRAINER */}
         <section id="trainer" className="section trainer-section">
           <div className="container trainer-card">
 
@@ -612,7 +647,7 @@ function App() {
 
                 <img
                   src={`${import.meta.env.BASE_URL}trainer-profile.png`}
-                  alt="Godson Y, CPC — Trainer at Altiora Medical Coding Academy"
+                  alt="Godson Y, CPC — Founder & Lead Trainer"
                   className="trainer-photo"
                 />
 
@@ -626,10 +661,12 @@ function App() {
 
             <div className="trainer-copy">
 
-              <span className="section-kicker">MEET YOUR TRAINER</span>
+              <span className="section-kicker">
+                FOUNDER & LEAD TRAINER
+              </span>
 
               <h2>
-                Learn from <span>Godson Y, CPC.</span>
+                Meet our <span>Founder & Lead Trainer.</span>
               </h2>
 
               <p className="trainer-intro">
@@ -666,10 +703,75 @@ function App() {
               </div>
 
               <p className="note">
-                * Additional trainer qualifications and experience can be added when finalized.
+                * Additional founder qualifications and experience can be added when finalized.
               </p>
 
             </div>
+
+          </div>
+        </section>
+
+        {/* TUTORS */}
+        <section id="tutors" className="section tutors-section">
+          <div className="container">
+
+            <div className="center-heading">
+              <span className="section-kicker">OUR TUTORS</span>
+
+              <h2>
+                Learn with an <span>experienced team.</span>
+              </h2>
+
+              <p>
+                Our tutors bring professional coding experience and practical
+                knowledge to support students throughout their learning journey.
+              </p>
+            </div>
+
+            <div className="tutors-grid">
+
+              {tutors.map((tutor) => (
+                <div className="tutor-badge" key={tutor.name}>
+
+                  <div className="tutor-badge-icon">
+                    <GraduationCap size={25} />
+                  </div>
+
+                  <div className="tutor-badge-content">
+
+                    <h3>{tutor.name}</h3>
+
+                    <span className="tutor-role">
+                      Medical Coding Tutor
+                    </span>
+
+                    <div className="tutor-details">
+
+                      <span>
+                        <Award size={14} />
+                        {tutor.credential}
+                      </span>
+
+                      <span>
+                        <Clock3 size={14} />
+                        {tutor.experience}
+                      </span>
+
+                    </div>
+
+                    {tutor.specialization && (
+                      <div className="tutor-specialization">
+                        {tutor.specialization}
+                      </div>
+                    )}
+
+                  </div>
+
+                </div>
+              ))}
+
+            </div>
+
           </div>
         </section>
 

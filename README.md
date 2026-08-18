@@ -1,4 +1,4 @@
-# Zion Medical Coding Academy
+# Altiara Medical Coding Academy
 
 A responsive React + Vite website starter for an online U.S. Medical Coding Training Institute.
 
